@@ -74,7 +74,7 @@ class Authentication
 
             $options['body'] = \GuzzleHttp\json_encode($this->getCredentials());
 
-            $request = Container::get('http')->getRequest('POST', '/auth', $options);
+            $request = Container::get('http')->getRequest('POST', Container::get('http')->buildApiUrl('auth'), $options);
             $response = Container::get('http')->getResponse($request);
 
             if (($response->hasHeader('Authorization')) && ($response->hasHeader('Expires'))) {
