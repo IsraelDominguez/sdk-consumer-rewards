@@ -247,6 +247,7 @@ class NetTools
      *
      * @param RequestInterface $request
      * @return array
+     * @throws ConsumerRewardsException
      * @throws MaxReachedException
      */
     public function getParsedResponse(RequestInterface $request)
@@ -277,7 +278,7 @@ class NetTools
                 $errors = array_pop(json_decode($content)->errors);
                 throw new MaxReachedException($errors->errorCode);
             }
-            return $response;
+            throw new ConsumerRewardsException("Error in Request: " . $response->getStatusCode());
         } else {
             return $this->parseJson($content);
         }

@@ -44,8 +44,8 @@ class Qrs
             );
 
             return $this->http->getSerializedResponse($request, Qr::class);
-        } catch (\Exception $e) {
-            var_dump($e);
+        } catch (ConsumerRewardsException $e) {
+            $this->logger->error($e->getMessage());
         }
     }
 

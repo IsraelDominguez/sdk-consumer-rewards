@@ -3,6 +3,7 @@
 use ConsumerRewards\SDK\Apis\Marketing;
 use ConsumerRewards\SDK\Apis\Qrs;
 use ConsumerRewards\SDK\Config\ConfigFactory;
+use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
 use ConsumerRewards\SDK\Tools\Container;
 use ConsumerRewards\SDK\Tools\NetTools;
 use ConsumerRewards\SDK\Tools\RequestFactory;
@@ -10,7 +11,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 
 class ConsumerRewards
 {
-    const VERSION = '1.0';
+        const VERSION = '1.0';
 
     /**
      * @var Marketing $marketing
@@ -38,13 +39,19 @@ class ConsumerRewards
      *          `logDir`: define log directory for the default LoggerInterface (root by default)
      *      PSR-16: `cache`: AbstractCachePool instance (FileSystem by default) http://www.php-cache.com/en/latest/#cache-pool-implementations
      *
+     * @throws ConsumerRewardsException
      */
     public function __construct(array $config = [], array $options = [])
     {
-        AnnotationRegistry::registerAutoloadNamespace(
-            'JMS\Serializer\Annotation',
-            "../vendor/jms/serializer/src"
-        );
+        try {
+            $reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
+            AnnotationRegistry::registerAutoloadNamespace(
+                'JMS\Serializer\Annotation',
+                dirname(dirname($reflection->getFileName())) . "/jms/serializer/src"
+            );
+        } catch (\ReflectionException $e) {
+            throw new ConsumerRewardsException("Error setting SDK");
+        }
 
         $this->autoConfig($config, $options);
 

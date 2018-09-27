@@ -94,7 +94,7 @@ class Marketing
                 Container::get('JWT')->getBearer()
             );
 
-            $response = $this->http->getResponse($request);
+            $response = $this->http->getParsedResponse($request);
 
             $this->logger->info(sprintf("Check Qr '%s' status: '%s'", $objectId, $response->getStatusCode()));
 
