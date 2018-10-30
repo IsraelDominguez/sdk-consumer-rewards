@@ -1,6 +1,7 @@
 <?php namespace ConsumerRewards\SDK\Config;
 
 
+use ConsumerRewards\SDK\Exception\ConsumerRewardsSdkAuthException;
 use ConsumerRewards\SDK\Security\AuthCredentials;
 use ConsumerRewards\SDK\Security\Authentication;
 use ConsumerRewards\SDK\Tools\Container;
@@ -31,13 +32,17 @@ class JWT extends AbstractConfig
         $this->jwt = Container::get('cache')->getItem('JWT')->get();
 
         if ((empty($this->jwt))||($this->jwt->isExpired())) {
-            Container::get('logger')->debug('JWT empty or expired');
+            try {
+                Container::get('logger')->debug('JWT empty or expired');
 
-            $this->jwt = Authentication::build()
-                ->setCredentials(new AuthCredentials($config['username'], $config['password']))
-                ->authorize();
+                $this->jwt = Authentication::build()
+                    ->setCredentials(new AuthCredentials($config['username'], $config['password']))
+                    ->authorize();
 
-            Container::get('cache')->set('JWT', $this->jwt);
+                Container::get('cache')->set('JWT', $this->jwt);
+            } catch (ConsumerRewardsSdkAuthException $e) {
+                Container::get('logger')->error($e->getMessage());
+            }
         } else {
             Container::get('logger')->debug('Get JWT from cache');
         }

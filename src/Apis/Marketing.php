@@ -3,6 +3,7 @@
 use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
 use ConsumerRewards\SDK\Exception\InvalidQrException;
 use ConsumerRewards\SDK\Exception\MaxReachedException;
+use ConsumerRewards\SDK\Exception\NoContentException;
 use ConsumerRewards\SDK\Tools\Container;
 use ConsumerRewards\SDK\Tools\HttpStatus;
 use ConsumerRewards\SDK\Tools\NetTools;
@@ -94,7 +95,7 @@ class Marketing
                 Container::get('JWT')->getBearer()
             );
 
-            $response = $this->http->getParsedResponse($request);
+            $response = $this->http->getResponse($request);
 
             $this->logger->info(sprintf("Check Qr '%s' status: '%s'", $objectId, $response->getStatusCode()));
 

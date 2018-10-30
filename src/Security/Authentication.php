@@ -63,30 +63,26 @@ class Authentication
         $this->jwt = $jwt;
     }
 
-
     /**
      * @return JWT token for Bearer Auth Request
+     * @throws ConsumerRewardsSdkAuthException
      */
     public function authorize() {
 
-        try {
-            $this->checkRequiredParameters($this->getRequiredRequestParameters(), $this->getCredentials()->jsonSerialize());
+        $this->checkRequiredParameters($this->getRequiredRequestParameters(), $this->getCredentials()->jsonSerialize());
 
-            $options['body'] = \GuzzleHttp\json_encode($this->getCredentials());
+        $options['body'] = \GuzzleHttp\json_encode($this->getCredentials());
 
-            $request = Container::get('http')->getRequest('POST', Container::get('http')->buildApiUrl('/auth'), $options);
-            $response = Container::get('http')->getResponse($request);
+        $request = Container::get('http')->getRequest('POST', Container::get('http')->buildApiUrl('/auth'), $options);
+        $response = Container::get('http')->getResponse($request);
 
-            if (($response->hasHeader('Authorization')) && ($response->hasHeader('Expires'))) {
-                $this->setJwt(new JWT($response->getHeaderLine('Authorization'), strtotime($response->getHeaderLine('Expires'))));
-            } else {
-                throw new ConsumerRewardsSdkAuthException("Not Auth Response from Server");
-            }
-
-            return $this->getJwt();
-        } catch (\Exception $e) {
-            var_dump($e->getMessage());
+        if (($response->hasHeader('Authorization')) && ($response->hasHeader('Expires'))) {
+            $this->setJwt(new JWT($response->getHeaderLine('Authorization'), strtotime($response->getHeaderLine('Expires'))));
+        } else {
+            throw new ConsumerRewardsSdkAuthException("Not Auth Response from Server");
         }
+
+        return $this->getJwt();
     }
 
 }
