@@ -84,6 +84,7 @@ class Marketing
      * @param User|null $user
      * @return string
      * @throws InvalidQrException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function checkById(string $objectId, User $user = null) : string
     {
@@ -95,7 +96,7 @@ class Marketing
                 Container::get('JWT')->getBearer()
             );
 
-            $response = $this->http->getResponse($request);
+            $response = $this->http->getResponse($request, ['http_errors' => false]);
 
             $this->logger->info(sprintf("Check Qr '%s' status: '%s'", $objectId, $response->getStatusCode()));
 
@@ -117,8 +118,5 @@ class Marketing
             $this->logger->error($e->getMessage() . sprintf("Generating Qr for Pack '%s' and User '%s'", $pack, $user->getIdentifier()));
         }
     }
-
-
-
 
 }
