@@ -9,3 +9,4 @@ vendor
 phpcs.xml
 .idea/*
 /vendor/
+.git
