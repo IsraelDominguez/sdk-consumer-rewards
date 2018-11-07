@@ -3,6 +3,7 @@
     "description": "SDK for Consumer Rewards API",
     "type": "library",
     "license": "MIT",
+    "version": "dev-master",
     "authors": [
         {
             "name": "idominguez",
