@@ -74,6 +74,7 @@ class Marketing
         } catch (ClientException $e) {
         } catch (MaxReachedException $e) {
             $this->logger->error($e->getMessage() . sprintf("Generating Qr for Pack '%s' and User '%s'", $pack, $user->getIdentifier()));
+            throw $e;
         }
     }
 

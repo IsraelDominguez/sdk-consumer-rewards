@@ -1,6 +1,8 @@
 <?php namespace ConsumerRewards\SDK\Tools;
 use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
+use ConsumerRewards\SDK\Exception\MaxPackageReachedException;
 use ConsumerRewards\SDK\Exception\MaxReachedException;
+use ConsumerRewards\SDK\Exception\MaxUserReachedException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Psr7\Response;
@@ -276,7 +278,14 @@ class NetTools
         if ($response->getStatusCode() != HttpStatus::HTTP_OK) {
             if ($response->getStatusCode() === HttpStatus::HTTP_TOO_MANY_REQUESTS) {
                 $errors = array_pop(json_decode($content)->errors);
-                throw new MaxReachedException($errors->errorCode);
+                switch ($errors->errorCode) {
+                    case 'UserMaxReached':
+                        throw new MaxUserReachedException($errors->errorCode);
+                    case 'PackageMaxReached':
+                        throw new MaxPackageReachedException($errors->errorCode);
+                    default:
+                        throw new MaxReachedException($errors->errorCode);
+                }
             }
             throw new ConsumerRewardsException("Error in Request: " . $response->getStatusCode());
         } else {
