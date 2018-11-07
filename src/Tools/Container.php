@@ -1,8 +1,9 @@
 <?php namespace ConsumerRewards\SDK\Tools;
 
-use ConsumerRewards\SDK\Exception\ConsumerRewardsContainerException;
-use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
-
+/**
+ * Class Container This is a generic data container. Used for messages and model data classes, can contains set of
+ * keys.
+*/
 class Container
 {
 
@@ -12,6 +13,8 @@ class Container
     protected static $instances = [];
 
     /**
+     * Set a concrete class in the Container
+     *
      * @param $abstract
      * @param null $concrete
      */
@@ -24,6 +27,8 @@ class Container
     }
 
     /**
+     * Get the concrete class stored in the Container for the abstract class required
+     *
      * @param $abstract
      * @return mixed|null Instance or null if not Exist
      */

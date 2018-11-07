@@ -2,35 +2,13 @@
 
 use JMS\Serializer\Annotation\Type;
 
-class Qr
+class Qr extends Item
 {
     const STATUS_VALID = 'valid';
     const STATUS_INVALID = 'invalid';
-    CONST STATUS_REDEEM = 'redeem';
-
-    /**
-     * @var string
-     * @Type("string")
-     */
-    protected $objectId;
-
-    /**
-     * @var string
-     * @Type("string")
-     */
-    protected $caption;
-
-    /**
-     * @var string
-     * @Type("string")
-     */
-    protected $url;
-
-    /**
-     * @var string
-     * @Type("string")
-     */
-    protected $publishedOn;
+    const STATUS_REDEEM = 'redeem';
+    const STATUS_EXPIRED = 'expired';
+    const STATUS_NOT_PUBLISHED = 'not_published';
 
     /**
      * @var string
@@ -39,10 +17,28 @@ class Qr
     protected $type;
 
     /**
+     * @var Pack
+     * @Type("ConsumerRewards\SDK\Transfer\Pack")
+     */
+    protected $pack;
+
+    /**
      * @var string
      * @Type("string")
      */
     protected $body;
+
+    /**
+     * @var string $label
+     * @Type("string")
+     */
+    protected $label;
+
+    /**
+     * @var User $user
+     * @Type("ConsumerRewards\SDK\Transfer\User")
+     */
+    protected $user;
 
     /**
      * @var string
@@ -57,122 +53,25 @@ class Qr
     protected $content;
 
     /**
-     * @var Document $document
-     * @Type("ConsumerRewards\SDK\Transfer\Document")
-     */
-    protected $document;
-
-    /**
-     * @var User $user
-     * @Type("ConsumerRewards\SDK\Transfer\User")
-     */
-    protected $user;
-
-    /**
-     * @var string $label
-     * @Type("string")
-     */
-    protected $label;
-
-
-    /**
      * Qr constructor.
-     * @param string $objectId
-     * @param string $caption
-     * @param string $url
-     * @param string $publishedOn
      * @param string $type
+     * @param Pack $pack
      * @param string $body
+     * @param string $label
+     * @param User $user
      * @param string $status
      * @param string $content
-     * @param Document $document
-     * @param User $user
      */
-    public function __construct(string $objectId, string $caption, string $label, string $url, string $publishedOn, string $type, string $body, string $status, string $content, Document $document, User $user)
+    public function __construct(string $objectId, string $key, string $displayName, string $caption, string $url, Document $document, string $publishedOn, string $expiresOn, string $type, Pack $pack, string $body, string $label, User $user, string $status, string $content)
     {
-        $this->objectId = $objectId;
-        $this->caption = $caption;
-        $this->url = $url;
-        $this->publishedOn = $publishedOn;
+        parent::__construct($objectId, $key, $displayName, $caption, $url, $document, $publishedOn, $expiresOn);
         $this->type = $type;
+        $this->pack = $pack;
         $this->body = $body;
+        $this->label = $label;
+        $this->user = $user;
         $this->status = $status;
         $this->content = $content;
-        $this->document = $document;
-        $this->user = $user;
-        $this->label = $label;
-    }
-
-    /**
-     * @return string
-     */
-    public function getObjectId(): string
-    {
-        return $this->objectId;
-    }
-
-    /**
-     * @param string $objectId
-     * @return Qr
-     */
-    public function setObjectId(string $objectId): Qr
-    {
-        $this->objectId = $objectId;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCaption(): string
-    {
-        return $this->caption;
-    }
-
-    /**
-     * @param string $caption
-     * @return Qr
-     */
-    public function setCaption(string $caption): Qr
-    {
-        $this->caption = $caption;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUrl(): string
-    {
-        return $this->url;
-    }
-
-    /**
-     * @param string $url
-     * @return Qr
-     */
-    public function setUrl(string $url): Qr
-    {
-        $this->url = $url;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPublishedOn(): string
-    {
-        return $this->publishedOn;
-    }
-
-    /**
-     * @param string $publishedOn
-     * @return Qr
-     */
-    public function setPublishedOn(string $publishedOn): Qr
-    {
-        $this->publishedOn = $publishedOn;
-        return $this;
     }
 
     /**
@@ -194,6 +93,24 @@ class Qr
     }
 
     /**
+     * @return Pack
+     */
+    public function getPack(): Pack
+    {
+        return $this->pack;
+    }
+
+    /**
+     * @param Pack $pack
+     * @return Qr
+     */
+    public function setPack(Pack $pack): Qr
+    {
+        $this->pack = $pack;
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getBody(): string
@@ -208,6 +125,42 @@ class Qr
     public function setBody(string $body): Qr
     {
         $this->body = $body;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLabel(): string
+    {
+        return $this->label;
+    }
+
+    /**
+     * @param string $label
+     * @return Qr
+     */
+    public function setLabel(string $label): Qr
+    {
+        $this->label = $label;
+        return $this;
+    }
+
+    /**
+     * @return User
+     */
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param User $user
+     * @return Qr
+     */
+    public function setUser(User $user): Qr
+    {
+        $this->user = $user;
         return $this;
     }
 
@@ -247,56 +200,6 @@ class Qr
         return $this;
     }
 
-    /**
-     * @return Document
-     */
-    public function getDocument(): Document
-    {
-        return $this->document;
-    }
 
-    /**
-     * @param Document $document
-     * @return Qr
-     */
-    public function setDocument(Document $document): Qr
-    {
-        $this->document = $document;
-        return $this;
-    }
-
-    /**
-     * @return User
-     */
-    public function getUser(): User
-    {
-        return $this->user;
-    }
-
-    /**
-     * @param User $user
-     */
-    public function setUser(User $user)
-    {
-        $this->user = $user;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLabel(): string
-    {
-        return $this->label;
-    }
-
-    /**
-     * @param string $label
-     * @return Qr
-     */
-    public function setLabel(string $label): Qr
-    {
-        $this->label = $label;
-        return $this;
-    }
 
 }

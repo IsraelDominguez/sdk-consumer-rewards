@@ -1,10 +1,12 @@
 <?php namespace ConsumerRewards\SDK\Config;
 
 
+use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
 use ConsumerRewards\SDK\Exception\ConsumerRewardsSdkAuthException;
 use ConsumerRewards\SDK\Security\AuthCredentials;
 use ConsumerRewards\SDK\Security\Authentication;
 use ConsumerRewards\SDK\Tools\Container;
+use GuzzleHttp\Exception\ConnectException;
 
 class JWT extends AbstractConfig
 {
@@ -22,10 +24,11 @@ class JWT extends AbstractConfig
      *
      */
     protected $jwt;
+
     /**
      * @param array $config
-     *
-     * @return JWT $jwt
+     * @return \ConsumerRewards\SDK\Security\JWT|mixed
+     * @throws ConsumerRewardsException
      */
     public function config(array $config)
     {
@@ -40,8 +43,9 @@ class JWT extends AbstractConfig
                     ->authorize();
 
                 Container::get('cache')->set('JWT', $this->jwt);
-            } catch (ConsumerRewardsSdkAuthException $e) {
+            } catch (ConnectException $e) {
                 Container::get('logger')->error($e->getMessage());
+                throw new ConsumerRewardsException($e->getMessage());
             }
         } else {
             Container::get('logger')->debug('Get JWT from cache');

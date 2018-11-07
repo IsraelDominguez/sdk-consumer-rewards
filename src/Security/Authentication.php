@@ -74,7 +74,7 @@ class Authentication
         $options['body'] = \GuzzleHttp\json_encode($this->getCredentials());
 
         $request = Container::get('http')->getRequest('POST', Container::get('http')->buildApiUrl('/auth'), $options);
-        $response = Container::get('http')->getResponse($request);
+        $response = Container::get('http')->getResponse($request, ['http_errors' => false]);
 
         if (($response->hasHeader('Authorization')) && ($response->hasHeader('Expires'))) {
             $this->setJwt(new JWT($response->getHeaderLine('Authorization'), strtotime($response->getHeaderLine('Expires'))));

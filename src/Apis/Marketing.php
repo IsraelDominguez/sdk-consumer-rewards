@@ -3,37 +3,23 @@
 use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
 use ConsumerRewards\SDK\Exception\InvalidQrException;
 use ConsumerRewards\SDK\Exception\MaxReachedException;
-use ConsumerRewards\SDK\Exception\NoContentException;
 use ConsumerRewards\SDK\Tools\Container;
 use ConsumerRewards\SDK\Tools\HttpStatus;
 use ConsumerRewards\SDK\Tools\NetTools;
 use ConsumerRewards\SDK\Transfer\Qr;
 use ConsumerRewards\SDK\Transfer\User;
 use GuzzleHttp\Exception\ClientException;
-use JMS\Serializer\SerializerBuilder;
-use Psr\Log\LoggerInterface;
 
-class Marketing
+class Marketing extends ApiGeneric
 {
-
     const ENDPOINT = '/marketing/';
-    /**
-     * @var NetTools $http
-     */
-    protected $http;
-
-    /**
-     * @var LoggerInterface $logger
-     */
-    protected $logger;
 
     /**
      * Marketing constructor.
      */
     public function __construct()
     {
-        $this->http = Container::get('http');
-        $this->logger = Container::get('logger');
+        parent::__construct();
     }
 
     /**
@@ -74,6 +60,7 @@ class Marketing
         } catch (ClientException $e) {
         } catch (MaxReachedException $e) {
             $this->logger->error($e->getMessage() . sprintf("Generating Qr for Pack '%s' and User '%s'", $pack, $user->getIdentifier()));
+            throw $e;
         }
     }
 
@@ -115,7 +102,7 @@ class Marketing
 
         } catch (ClientException $e) {
         } catch (MaxReachedException $e) {
-            $this->logger->error($e->getMessage() . sprintf("Generating Qr for Pack '%s' and User '%s'", $pack, $user->getIdentifier()));
+            $this->logger->error($e->getMessage() . sprintf("Check Qr by Id '%s' and User '%s'", $objectId, $user->getIdentifier()));
         }
     }
 

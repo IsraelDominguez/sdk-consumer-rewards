@@ -1,18 +1,17 @@
 <?php namespace ConsumerRewards\SDK\Apis;
 
 use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
-use ConsumerRewards\SDK\Exception\InvalidQrException;
+use ConsumerRewards\SDK\Exception\InvalidPackException;
 use ConsumerRewards\SDK\Tools\Container;
 use ConsumerRewards\SDK\Tools\NetTools;
-use ConsumerRewards\SDK\Transfer\Qr;
-use Psr\Log\LoggerInterface;
+use ConsumerRewards\SDK\Transfer\Pack;
 
-class Qrs extends ApiGeneric
+class Packs extends ApiGeneric
 {
-    const ENDPOINT = '/qrs/';
+    const ENDPOINT = '/packs/';
 
     /**
-     * Qrs Api
+     * Packs Api.
      */
     public function __construct()
     {
@@ -23,22 +22,22 @@ class Qrs extends ApiGeneric
      * Get Qr by indentifier
      *
      * @param string $objectId
-     * @return Qr
-     * @throws InvalidQrException
+     * @return Pack
+     * @throws InvalidPackException
      */
-    public function findById(string $objectId) : Qr
+    public function findById(string $objectId) : Pack
     {
         try {
             $request = $this->http->getAuthenticatedRequest(
                 NetTools::HTTP_GET,
-                $this->http->buildApiUrl(Qrs::ENDPOINT . $objectId),
+                $this->http->buildApiUrl(Packs::ENDPOINT . $objectId),
                 Container::get('JWT')->getBearer()
             );
 
-            return $this->http->getSerializedResponse($request, Qr::class);
+            return $this->http->getSerializedResponse($request, Pack::class);
         } catch (ConsumerRewardsException $e) {
             $this->logger->error($e->getMessage());
-            throw new InvalidQrException($e->getMessage());
+            throw new InvalidPackException($e->getMessage());
         }
     }
 

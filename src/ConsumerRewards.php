@@ -1,6 +1,7 @@
 <?php namespace ConsumerRewards\SDK;
 
 use ConsumerRewards\SDK\Apis\Marketing;
+use ConsumerRewards\SDK\Apis\Packs;
 use ConsumerRewards\SDK\Apis\Qrs;
 use ConsumerRewards\SDK\Config\ConfigFactory;
 use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
@@ -11,17 +12,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 
 class ConsumerRewards
 {
-        const VERSION = '1.0';
-
-    /**
-     * @var Marketing $marketing
-     */
-    protected $marketing;
-
-    /**
-     * @var Qrs $qrs
-     */
-    protected $qrs;
+    const VERSION = '1.0';
 
     /**
      * Constructs a ConsumerRewards SDK instance.
@@ -39,7 +30,9 @@ class ConsumerRewards
      *          `logDir`: define log directory for the default LoggerInterface (root by default)
      *      PSR-16: `cache`: AbstractCachePool instance (FileSystem by default) http://www.php-cache.com/en/latest/#cache-pool-implementations
      *
-     * @throws ConsumerRewardsException
+     * @throws ConsumerRewardsException Some error exist (ConnectException, ....)
+     * @throws ConsumerRewardsSdkAuthException If auth connection fail
+     *
      */
     public function __construct(array $config = [], array $options = [])
     {
@@ -55,7 +48,10 @@ class ConsumerRewards
 
         $this->autoConfig($config, $options);
 
-        $this->setMarketing(new Marketing())->setQrs(new Qrs());
+        Container::set('marketingApi', new Marketing());
+        Container::set('qrsApi', new Qrs());
+        Container::set('packsApi', new Packs());
+
     }
 
     protected function autoConfig(array $config = [], array $options = []) {
@@ -94,17 +90,7 @@ class ConsumerRewards
      */
     public function getMarketing(): Marketing
     {
-        return $this->marketing;
-    }
-
-    /**
-     * @param Marketing $marketing
-     * @return ConsumerRewards
-     */
-    public function setMarketing(Marketing $marketing): ConsumerRewards
-    {
-        $this->marketing = $marketing;
-        return $this;
+        return Container::get('marketingApi');
     }
 
     /**
@@ -112,16 +98,15 @@ class ConsumerRewards
      */
     public function getQrs(): Qrs
     {
-        return $this->qrs;
+        return Container::get('qrsApi');
     }
 
     /**
-     * @param Qrs $qrs
-     * @return ConsumerRewards
+     * @return Packs
      */
-    public function setQrs(Qrs $qrs): ConsumerRewards
+    public function getPacks(): Packs
     {
-        $this->qrs = $qrs;
-        return $this;
+        return Container::get('packsApi');
     }
+
 }

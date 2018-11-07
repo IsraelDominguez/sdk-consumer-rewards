@@ -1,9 +1,13 @@
 <?php namespace ConsumerRewards\SDK\Tools;
 use ConsumerRewards\SDK\Exception\ConsumerRewardsException;
+use ConsumerRewards\SDK\Exception\MaxPackageReachedException;
 use ConsumerRewards\SDK\Exception\MaxReachedException;
+use ConsumerRewards\SDK\Exception\MaxUserReachedException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Psr7\Response;
+use JMS\Serializer\EventDispatcher\EventDispatcher;
+use JMS\Serializer\Handler\HandlerRegistry;
 use JMS\Serializer\SerializerBuilder;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -278,7 +282,14 @@ class NetTools
         if ($response->getStatusCode() != HttpStatus::HTTP_OK) {
             if ($response->getStatusCode() === HttpStatus::HTTP_TOO_MANY_REQUESTS) {
                 $errors = array_pop(json_decode($content)->errors);
-                throw new MaxReachedException($errors->errorCode);
+                switch ($errors->errorCode) {
+                    case 'UserMaxReached':
+                        throw new MaxUserReachedException($errors->errorCode);
+                    case 'PackageMaxReached':
+                        throw new MaxPackageReachedException($errors->errorCode);
+                    default:
+                        throw new MaxReachedException($errors->errorCode);
+                }
             }
             throw new ConsumerRewardsException("Error in Request: " . $response->getStatusCode());
         } else {
@@ -300,20 +311,32 @@ class NetTools
 
     /**
      * Method to Cast response to Object of toClass Instance
+     *
+     * @param RequestInterface $request
+     * @param string $toClass
+     * @return array|\JMS\Serializer\scalar|mixed|object
+     * @throws ConsumerRewardsException
      */
     public function getSerializedResponse(RequestInterface $request, string $toClass) {
-
         $response = $this->getParsedResponse($request);
 
         $serializer = SerializerBuilder::create()->build();
+
+//        $serializer = SerializerBuilder::create()->configureHandlers(function(HandlerRegistry $registry) {
+//            $registry->registerSubscribingHandler(new LinkPackDeserializeHandler());
+//        })->build();
+
+//        $serializer = SerializerBuilder::create()->configureListeners(function(EventDispatcher $dispatcher) {
+//            $dispatcher->addSubscriber(new LinksHateoasEventSubscriber());
+//        })->build();
+
         $json = $serializer->serialize($response, 'json');
         $object  = $serializer->deserialize($json, $toClass, 'json');
 
-        if ($object instanceof $toClass) {
-            return $object;
+        if (!($object instanceof $toClass)) {
+            throw new ConsumerRewardsException("Error Serialized Response of class " .  $toClass);
         }
 
-        throw new ConsumerRewardsException("Error Serialized Response of class " .  $toClass);
+        return $object;
     }
-
 }
