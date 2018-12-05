@@ -8,6 +8,12 @@ class Pack extends Item
      * @var string
      * @Type("string")
      */
+    protected $type;
+
+    /**
+     * @var string
+     * @Type("string")
+     */
     protected $body;
 
     /**
@@ -21,12 +27,13 @@ class Pack extends Item
      * @param string $body
      * @param string $label
      */
-    public function __construct(string $objectId, string $key, string $displayName, string $caption, string $url, Document $document, string $publishedOn, string $expiresOn, string $body, string $label)
+    public function __construct(string $objectId = null, string $key = null, string $displayName = null, string $caption = null, string $url = null, Document $document = null, $configuration = null, string $publishedOn = null, string $expiresOn = null, string $body = null, string $label = null, array $configurations = null, string $type = null)
     {
-        parent::__construct($objectId, $key, $displayName, $caption, $url, $document, $publishedOn, $expiresOn);
+        parent::__construct($objectId, $key, $displayName, $caption, $url, $document, $publishedOn, $expiresOn, $configurations);
 
         $this->body = $body;
         $this->label = $label;
+        $this->type = $type;
     }
 
     /**
@@ -65,5 +72,22 @@ class Pack extends Item
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     * @return Pack
+     */
+    public function setType(string $type): Pack
+    {
+        $this->type = $type;
+        return $this;
+    }
 
 }

@@ -6,9 +6,12 @@ use ConsumerRewards\SDK\Exception\MaxReachedException;
 use ConsumerRewards\SDK\Tools\Container;
 use ConsumerRewards\SDK\Tools\HttpStatus;
 use ConsumerRewards\SDK\Tools\NetTools;
+use ConsumerRewards\SDK\Transfer\Pack;
 use ConsumerRewards\SDK\Transfer\Qr;
 use ConsumerRewards\SDK\Transfer\User;
 use GuzzleHttp\Exception\ClientException;
+use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
+use JMS\Serializer\SerializerBuilder;
 
 class Marketing extends ApiGeneric
 {
@@ -36,11 +39,36 @@ class Marketing extends ApiGeneric
     }
 
     /**
+     * @param Pack $pack
+     * @param bool $generate_max
+     * @return Pack
+     * @throws ConsumerRewardsException
+     */
+    public function createPack($pack, $generate_max = false) {
+        try {
+            $serializer = SerializerBuilder::create()->setPropertyNamingStrategy(new IdenticalPropertyNamingStrategy())->build();
+            $options['body'] =  $serializer->serialize($pack, 'json');
+
+            $request = $this->http->getAuthenticatedRequest(
+                NetTools::HTTP_POST,
+                $this->http->buildApiUrl(Marketing::ENDPOINT . 'packs', ['generateMax' => ($generate_max) ? 'true' : 'false']),
+                Container::get('JWT')->getBearer(),
+                $options
+            );
+
+            return $this->http->getSerializedResponse($request, Pack::class);
+        } catch (\Exception $e) {
+            $this->logger->error($e->getMessage());
+            throw new ConsumerRewardsException($e->getMessage());
+        }
+    }
+
+    /**
      * Generate a new QR in the specified Pack for the User
      *
      * @param $pack
      * @param User $user
-     * @return Qrs
+     * @return Qr
      * @throws ConsumerRewardsException
      */
     public function generateQr($pack, User $user) {
@@ -94,6 +122,14 @@ class Marketing extends ApiGeneric
 
                 case HttpStatus::HTTP_NO_CONTENT:
                     return Qr::STATUS_VALID;
+                    break;
+
+                case HttpStatus::HTTP_REQUESTED_RANGE_NOT_SATISFIABLE:
+                    return Qr::STATUS_NOT_PUBLISHED;
+                    break;
+
+                case HttpStatus::HTTP_REQUEST_TIMEOUT:
+                    return Qr::STATUS_EXPIRED;
                     break;
 
                 case HttpStatus::HTTP_NOT_FOUND:

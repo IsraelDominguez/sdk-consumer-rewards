@@ -59,6 +59,12 @@ class Item
     protected $expiresOn;
 
     /**
+     * @var array(Configuration)
+     * @Type("array<ConsumerRewards\SDK\Transfer\Configuration>")
+     */
+    protected $configurations;
+
+    /**
      * Item constructor.
      * @param string $objectId
      * @param string $key
@@ -70,7 +76,7 @@ class Item
      * @param string $publishedOn
      * @param string $expiresOn
      */
-    public function __construct(string $objectId, string $key, string $displayName, string $caption, string $url, Document $document, string $publishedOn, string $expiresOn)
+    public function __construct(string $objectId = null, string $key = null, string $displayName = null, string $caption = null, string $url = null, Document $document = null, string $publishedOn = null, string $expiresOn = null, $configurations = null)
     {
         $this->objectId = $objectId;
         $this->key = $key;
@@ -80,6 +86,7 @@ class Item
         $this->document = $document;
         $this->publishedOn = $publishedOn;
         $this->expiresOn = $expiresOn;
+        $this->configurations = $configurations;
     }
 
     /**
@@ -243,5 +250,25 @@ class Item
         $this->expiresOn = $expiresOn;
         return $this;
     }
+
+    /**
+     * @return Array
+     */
+    public function getConfigurations(): Array
+    {
+        return $this->configurations;
+    }
+
+    /**
+     * @param Array $configurations
+     * @return Item
+     */
+    public function setConfigurations(Array $configurations)
+    {
+        $this->configurations = $configurations;
+        return $this;
+    }
+
+
 
 }
