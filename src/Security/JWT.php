@@ -71,6 +71,6 @@ class JWT
     }
 
     public function isExpired() {
-        return microtime() >= $this->getExpiresAt();
+        return time() >= $this->getExpiresAt();
     }
 }
