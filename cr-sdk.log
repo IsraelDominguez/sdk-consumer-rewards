@@ -20070,3 +20070,2148 @@ Vary: Accept-Encoding
 -----------------
 
 [2018-11-06 12:25:03] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.2.11-3+ubuntu16.04.1+deb.sury.org+1 - [06/Nov/2018:12:25:03 +0000] "GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1" 200 
+[2019-03-25 10:55:36] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:55:36] cr-log.NOTICE - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: incorrectsite.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+
+-----------------
+
+[2019-03-25 10:55:36] cr-log.NOTICE - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:36 +0000] "POST /auth HTTP/1.1" NULL NULL
+[2019-03-25 10:55:36] cr-log.ERROR - : cURL error 6: Could not resolve host: incorrectsite.com (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+[2019-03-25 10:55:36] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:55:39] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:39 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzMzksImV4cCI6MTU1NjEwMzMzOX0.yefBt6EbxhISp7xoQpqtYluMO03SBJdZl_2-sYvhu7dld6tUL1_LUj_p4HOZn9l_UegasYa_HJfXNBApnbMFhA
+Expires: Wed, 24 Apr 2019 10:55:39 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:55:39] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:39 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:55:39] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:55:39] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 78
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055----","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 403 Forbidden
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:39 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:55:39] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:39 +0000] "POST /auth HTTP/1.1" 403 0
+[2019-03-25 10:55:39] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:55:40] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:40 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDAsImV4cCI6MTU1NjEwMzM0MH0.OLG2KjgR35cPST33u7vHFV0XYP5s9JMdCLW2H4rSzd5aYsXQlfgFCdZmrQGQZbwdUinXtgHkrr5zzR6WDX-Mxw
+Expires: Wed, 24 Apr 2019 10:55:40 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:55:40] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:40 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:55:40] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:55:40] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:40 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDAsImV4cCI6MTU1NjEwMzM0MH0.OLG2KjgR35cPST33u7vHFV0XYP5s9JMdCLW2H4rSzd5aYsXQlfgFCdZmrQGQZbwdUinXtgHkrr5zzR6WDX-Mxw
+Expires: Wed, 24 Apr 2019 10:55:40 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:55:40] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:40 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:55:40] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/NOTEXIST HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDAsImV4cCI6MTU1NjEwMzM0MH0.OLG2KjgR35cPST33u7vHFV0XYP5s9JMdCLW2H4rSzd5aYsXQlfgFCdZmrQGQZbwdUinXtgHkrr5zzR6WDX-Mxw
+
+
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:40 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:55:40] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:40 +0000] "GET /packs/NOTEXIST HTTP/1.1" 404 0
+[2019-03-25 10:55:40] cr-log.ERROR - : Error in Request: 404
+[2019-03-25 10:55:40] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDAsImV4cCI6MTU1NjEwMzM0MH0.OLG2KjgR35cPST33u7vHFV0XYP5s9JMdCLW2H4rSzd5aYsXQlfgFCdZmrQGQZbwdUinXtgHkrr5zzR6WDX-Mxw
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:40 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:28:48 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a",
+  "key" : "test-pack",
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:28:48.177+0000",
+  "updatedOn" : "2018-10-15T14:28:48.177+0000",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "type" : "consumer_rewards",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "0846ab9e0b5c8768ef65ae5499215b217c541665c30cb513b3a95ba73a2704b7",
+    "key" : "max_per_user",
+    "createdOn" : "2018-10-15T14:28:48.185+0000",
+    "updatedOn" : "2018-10-15T14:28:48.185+0000",
+    "type" : "Integer",
+    "value" : "1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "2b449b3eb93ea52cee652e12c0c14bfdf0f31aa3c7f9b0783346bac787bf2297",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:28:48.194+0000",
+    "updatedOn" : "2018-10-15T14:28:48.194+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "4bf55048c7d33175f7b9c2199b8ccd1bf92ac9c7059d4e94fc5ec98b1049ff94",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:28:48.190+0000",
+    "updatedOn" : "2018-10-15T14:28:48.190+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "5f8845192b1a9a1e540baaa459ae44098336422b408fe9caf8b82ffcb6050e21",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:28:48.192+0000",
+    "updatedOn" : "2018-10-15T14:28:48.192+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "8eb0dfa99fd8958167f2ed08f9619824e95cb55607adeef0d10863eac681d757",
+    "key" : "max",
+    "createdOn" : "2018-10-15T14:28:48.188+0000",
+    "updatedOn" : "2018-10-15T14:28:48.188+0000",
+    "type" : "Integer",
+    "value" : "50",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a"
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:55:40] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:40 +0000] "GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1" 200 
+[2019-03-25 10:55:41] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDAsImV4cCI6MTU1NjEwMzM0MH0.OLG2KjgR35cPST33u7vHFV0XYP5s9JMdCLW2H4rSzd5aYsXQlfgFCdZmrQGQZbwdUinXtgHkrr5zzR6WDX-Mxw
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:40 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:28:48 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a",
+  "key" : "test-pack",
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:28:48.177+0000",
+  "updatedOn" : "2018-10-15T14:28:48.177+0000",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "type" : "consumer_rewards",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "0846ab9e0b5c8768ef65ae5499215b217c541665c30cb513b3a95ba73a2704b7",
+    "key" : "max_per_user",
+    "createdOn" : "2018-10-15T14:28:48.185+0000",
+    "updatedOn" : "2018-10-15T14:28:48.185+0000",
+    "type" : "Integer",
+    "value" : "1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "2b449b3eb93ea52cee652e12c0c14bfdf0f31aa3c7f9b0783346bac787bf2297",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:28:48.194+0000",
+    "updatedOn" : "2018-10-15T14:28:48.194+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "4bf55048c7d33175f7b9c2199b8ccd1bf92ac9c7059d4e94fc5ec98b1049ff94",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:28:48.190+0000",
+    "updatedOn" : "2018-10-15T14:28:48.190+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "5f8845192b1a9a1e540baaa459ae44098336422b408fe9caf8b82ffcb6050e21",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:28:48.192+0000",
+    "updatedOn" : "2018-10-15T14:28:48.192+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "8eb0dfa99fd8958167f2ed08f9619824e95cb55607adeef0d10863eac681d757",
+    "key" : "max",
+    "createdOn" : "2018-10-15T14:28:48.188+0000",
+    "updatedOn" : "2018-10-15T14:28:48.188+0000",
+    "type" : "Integer",
+    "value" : "50",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a"
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:55:41] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:41 +0000] "GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1" 200 
+[2019-03-25 10:55:41] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:55:41] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:41 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDEsImV4cCI6MTU1NjEwMzM0MX0.3_SSBZlonceKzyrDE-Vf1OdB4wAZGj5tcWlBrAq01zHmK8a2DwVhe1FrIfwIZhxhd2mCb-RUfi8m36fhqXHVpw
+Expires: Wed, 24 Apr 2019 10:55:41 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:55:41] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:41 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:55:41] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/QRNOTEXIST HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDEsImV4cCI6MTU1NjEwMzM0MX0.3_SSBZlonceKzyrDE-Vf1OdB4wAZGj5tcWlBrAq01zHmK8a2DwVhe1FrIfwIZhxhd2mCb-RUfi8m36fhqXHVpw
+
+
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:41 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:55:41] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:41 +0000] "GET /qrs/QRNOTEXIST HTTP/1.1" 404 0
+[2019-03-25 10:55:41] cr-log.ERROR - : Error in Request: 404
+[2019-03-25 10:55:41] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDEsImV4cCI6MTU1NjEwMzM0MX0.3_SSBZlonceKzyrDE-Vf1OdB4wAZGj5tcWlBrAq01zHmK8a2DwVhe1FrIfwIZhxhd2mCb-RUfi8m36fhqXHVpw
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:41 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:39:52 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa",
+  "key" : "2V4zopOY",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa",
+  "document" : {
+    "lob" : "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K73eF198MXu8b5BLH9+8efPc85588sm5r3/22WdXv9b/e7njfOaZZ+Ye/+GHH65+7ddff5372oEDB5Y9zlOnTpW99gAAgCYAfP31193zzz/f7dq1q7vrrrtmH42v/f7bb799xdfrG36fK1eurPiztmzZMve133777erX+k8eyz13+/btqx753rRp07LH2WMBgAkBED0Lr9W22EONAfR99L7vvNbj6gfwVoPN0o/x/X/9J43lPnUsfW4/YPdfzuFKxxndL28169MYAABWDcDDDz889/i77747GylfqTHeqJH/108A136UX/rcbdu2zT3ejzdklxUBAICFA6Avwy19/OLFi7PHv//++xAArh0D+Pzzz69+rf/3cs/tByqXPv7BBx8AAADDnPhW+/i1XJDi3zzyyCNzj3/88cezv8oHDx4MAaAfhFv6tccff3w2mt//1/97ued+9dVXc2MT/SeJ06dPdxcuXJj9991333UnTpzo9u7dOygAFZbaarXPIQAmAED/l/R6P+vIkSMhAFxvRH+18wDef//9VY0FAAAAALiJj8Iffvhh99hjj3UbN27sHnjgge6NN9644Wj+WhpdP77QT9jZuXPn1VmD/V/v1cwE7Mt/R48enc0e7CsWPQh9haAv/b322mtz5UEATBSAocos0f2qrBs4/vzzz7nn3nvvvZ3kXleZ40zVS4IASASgn/HWz8lf+tynnnpKCwYAAKYAwLWv3c+lP3v2rBYMgOkBsJYTHN3/i/r+f2+S6e9+e/rpp2flPclp6BE3gY11GTAANAJAAACABQcgc+JHxHFmdosqbwMHgAL9/lZ7660FraF+r8zfPfp1MpfRqnbOhzp+AAAAAAAAAAAAAICRAhBdWol4YytsWpk5ZlBtplurPfpabTgDAAAAAAAAAAAAALAAAAx14he1TBRddou+fz0ay1YzQyNeZ6jfFwAAAAAAAAAAAABgwcYAoscJovuLEa8z1AXeah/F6D33omeSVgMJAAAAAAAAAAAAAGBEYwBDlVwyG1bE60SX7KqNYURvulLhj0N0WRsAAAAAAAAAAAAAYAHGADL7wRVmFEb8jtHHmQlSNPwR56HaTFIAAAAAAAAAAAAAgIJjANH3/UeX+1r1WaPLd9EXfoVGkFm+i75hCAAAAAAAAAAAAABgImXAiHJK9LJSmasaR/dro0uymQ0xc0wr+ngAAAAAAAAAAAAAAAoCEH1TS0R5aqgGWu2mlujGHTEGUAGVzLUlJr8sOAAAAAAAAAAAAFhkACrcoJM5cy3iXEWMW7QqaY4RpMw/PgAAAAAAAAAAAAAACzYGkPmambMLI0qFrVDMvFc+s6Qcfc1XLxUCAAAAAAAAAAAAABQoA2Y23ExgMpe2Gqpvnbk+QXT/u2Lja/1zAQAAAAAAAAAAAACSf7nMzTqGQqvVbL7MMYzM1W2jl9fKhKra+gcAAAAAAAAAAAAAAMUBqFDaanUxVtjfbyhcW90gFdHnbjVeBQAAAAAAAAAAAAAwwTJgq5Vro0t2rfaLq7wdenQDqrxt+CT3BgQAAAAAAAAAAABT3B68Qr8tE6TM8mmrmY9DlVUzx2+iz0Pmis4AAAAAAAAAAAAAAMUBiGjoY9yGOnpl31als1YNLhrO6JmAAAAAAAAAAAAAAAATASBz5lqrfmpEo4+eQTlUA62wB2Bm+bRKnx4AAAAAAAAAAAAAoBgAEfe4RzTiVn3QzPPWap2GzIYSfYNXJmYAAAAAAAAAAAAAACMCoNp2za0u6sz96IYae4hGpcI+gRHf02pTFAAAAAAAAAAAAACA4gBE9O0qLCuVuWps5urFrcZLohtcq3ERAAAAAAAAAAAAAICJA1BhWawKM+wybzqJXh15qPGVVhuPVFttGgAAAAAAAAAAAABgRABUG2OI7n9Hv7HRM8ta7bOXWdarsE19lZIgAAAAAAAAAAAAAEBwA80sPWXeox/dr231s6LLXxHgZY4bZZ4HAAAAAAAAAAAAAICRAtDqdarNsIs4D8YA4pZbywRskvMAAAAAAAAAAAAAwBRXBGp1v37mTScRaI1l5lrm8Uc3psyxKwAAAAAAAAAAAAAAAISWwjL3eWu1p1zEsUWM5WRiH12yq7gMGAAAAAAAAAAAAADAxMYAKpTIMqGKLk+16t9HvKet/mgAAAAAAAAAAAAAAEwEgMy+Y2bpLLM/Gr1cVqtNTiqs1txqoxgAAAAAAAAAAAAAgAUDIHNWWoWbVzJ/l1aNe1HLhpl4TGZjEAAAAAAAAAAAADAVAESkbgAgAgARAYCIAEBEACAiABARAIgIAEQEACICABEBgIgAQEQAICIAEBEAiAgARAQAIgIAEQGAiABARAAgIgAQEQCICABEJC7/AzU15F+gKyeAAAAAAElFTkSuQmCC",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.994+0000",
+  "updatedOn" : "2018-10-15T14:39:52.359+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "redeem",
+  "content" : "OBJECTID:4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa\r\nIAT:1539613740946\r\nSIG:c22cdde09d6c241ba3728e8db0b8dc16dc2dae7a2ceee52ea2aa7be13123d080",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "63bbb33e0237695ff921688b03d94a21af57b9ef2940ef1c94dc5ff5cac983e8",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:01.075+0000",
+    "updatedOn" : "2018-10-15T14:29:01.075+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "be3ef0c81a5a8e6a0b40eafd1275204ed004a4288160e1e035a045bc6bf148c6",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:01.074+0000",
+    "updatedOn" : "2018-10-15T14:29:01.074+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e7b734aa25f00c5028513f65e00a1bbc5ad1dc6913d6fab30ef2c6580a313c76",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:01.076+0000",
+    "updatedOn" : "2018-10-15T14:29:01.076+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:55:41] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:41 +0000] "GET /qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa HTTP/1.1" 200 
+[2019-03-25 10:55:41] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDEsImV4cCI6MTU1NjEwMzM0MX0.3_SSBZlonceKzyrDE-Vf1OdB4wAZGj5tcWlBrAq01zHmK8a2DwVhe1FrIfwIZhxhd2mCb-RUfi8m36fhqXHVpw
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:41 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:29:00 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "key" : "D96VPoOw",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "document" : {
+    "lob" : "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",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.797+0000",
+  "updatedOn" : "2018-10-15T14:29:00.862+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "valid",
+  "content" : "OBJECTID:b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af\r\nIAT:1539613740756\r\nSIG:d68ee7857efa432b85b9798dd270b55e6b621314c6111091ab3a14f7a9511ed3",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "48690da5333e8ddb96ee6cb5d98e20caf905cefdb9d198d34a43f5dd16bdb1ed",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:00.860+0000",
+    "updatedOn" : "2018-10-15T14:29:00.860+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e06c0b5d9a9505021f56d2292ff2201844cfd4c57664ac987c5d203be540f12b",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:00.859+0000",
+    "updatedOn" : "2018-10-15T14:29:00.859+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "fe983f361b61f9b589cdb7fec87d84b4fbb3d44ffd58dc53d77e21a44bd74505",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:00.858+0000",
+    "updatedOn" : "2018-10-15T14:29:00.858+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:55:41] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:41 +0000] "GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1" 200 
+[2019-03-25 10:55:41] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNDEsImV4cCI6MTU1NjEwMzM0MX0.3_SSBZlonceKzyrDE-Vf1OdB4wAZGj5tcWlBrAq01zHmK8a2DwVhe1FrIfwIZhxhd2mCb-RUfi8m36fhqXHVpw
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:55:41 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:29:00 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "key" : "D96VPoOw",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "document" : {
+    "lob" : "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",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.797+0000",
+  "updatedOn" : "2018-10-15T14:29:00.862+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "valid",
+  "content" : "OBJECTID:b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af\r\nIAT:1539613740756\r\nSIG:d68ee7857efa432b85b9798dd270b55e6b621314c6111091ab3a14f7a9511ed3",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "48690da5333e8ddb96ee6cb5d98e20caf905cefdb9d198d34a43f5dd16bdb1ed",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:00.860+0000",
+    "updatedOn" : "2018-10-15T14:29:00.860+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e06c0b5d9a9505021f56d2292ff2201844cfd4c57664ac987c5d203be540f12b",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:00.859+0000",
+    "updatedOn" : "2018-10-15T14:29:00.859+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "fe983f361b61f9b589cdb7fec87d84b4fbb3d44ffd58dc53d77e21a44bd74505",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:00.858+0000",
+    "updatedOn" : "2018-10-15T14:29:00.858+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:55:41] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:55:41 +0000] "GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1" 200 
+[2019-03-25 10:56:16] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:56:16] cr-log.NOTICE - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: incorrectsite.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+
+-----------------
+
+[2019-03-25 10:56:16] cr-log.NOTICE - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:16 +0000] "POST /auth HTTP/1.1" NULL NULL
+[2019-03-25 10:56:16] cr-log.ERROR - : cURL error 6: Could not resolve host: incorrectsite.com (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+[2019-03-25 10:56:16] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:56:16] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:16 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzYsImV4cCI6MTU1NjEwMzM3Nn0.khF-L-CyWFuwc-9f-KpoQZSQK3g_-LeIJU8qnEpLFsz0bRUFV-uY5xO-BpILBaDzrhrmLBjG9po9jpQsexRI2w
+Expires: Wed, 24 Apr 2019 10:56:16 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:56:16] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:16 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:56:16] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:56:17] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 78
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055----","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 403 Forbidden
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:17 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:56:17] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:17 +0000] "POST /auth HTTP/1.1" 403 0
+[2019-03-25 10:56:17] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:56:17] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:17 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzcsImV4cCI6MTU1NjEwMzM3N30.ZeBH_v59FTxvZtUyOS_XBg6LpltOxbt4vqyDmctXq6UkzjAwKyEjh7f0-cAVroclWp9-cV4bLsSdUCpBznWmvQ
+Expires: Wed, 24 Apr 2019 10:56:17 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:56:17] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:17 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:56:17] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:56:17] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:17 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzcsImV4cCI6MTU1NjEwMzM3N30.ZeBH_v59FTxvZtUyOS_XBg6LpltOxbt4vqyDmctXq6UkzjAwKyEjh7f0-cAVroclWp9-cV4bLsSdUCpBznWmvQ
+Expires: Wed, 24 Apr 2019 10:56:17 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:56:17] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:17 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:56:17] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/NOTEXIST HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzcsImV4cCI6MTU1NjEwMzM3N30.ZeBH_v59FTxvZtUyOS_XBg6LpltOxbt4vqyDmctXq6UkzjAwKyEjh7f0-cAVroclWp9-cV4bLsSdUCpBznWmvQ
+
+
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:17 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:56:17] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:17 +0000] "GET /packs/NOTEXIST HTTP/1.1" 404 0
+[2019-03-25 10:56:17] cr-log.ERROR - : Error in Request: 404
+[2019-03-25 10:56:17] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzcsImV4cCI6MTU1NjEwMzM3N30.ZeBH_v59FTxvZtUyOS_XBg6LpltOxbt4vqyDmctXq6UkzjAwKyEjh7f0-cAVroclWp9-cV4bLsSdUCpBznWmvQ
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:17 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:28:48 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a",
+  "key" : "test-pack",
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:28:48.177+0000",
+  "updatedOn" : "2018-10-15T14:28:48.177+0000",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "type" : "consumer_rewards",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "0846ab9e0b5c8768ef65ae5499215b217c541665c30cb513b3a95ba73a2704b7",
+    "key" : "max_per_user",
+    "createdOn" : "2018-10-15T14:28:48.185+0000",
+    "updatedOn" : "2018-10-15T14:28:48.185+0000",
+    "type" : "Integer",
+    "value" : "1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "2b449b3eb93ea52cee652e12c0c14bfdf0f31aa3c7f9b0783346bac787bf2297",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:28:48.194+0000",
+    "updatedOn" : "2018-10-15T14:28:48.194+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "4bf55048c7d33175f7b9c2199b8ccd1bf92ac9c7059d4e94fc5ec98b1049ff94",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:28:48.190+0000",
+    "updatedOn" : "2018-10-15T14:28:48.190+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "5f8845192b1a9a1e540baaa459ae44098336422b408fe9caf8b82ffcb6050e21",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:28:48.192+0000",
+    "updatedOn" : "2018-10-15T14:28:48.192+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "8eb0dfa99fd8958167f2ed08f9619824e95cb55607adeef0d10863eac681d757",
+    "key" : "max",
+    "createdOn" : "2018-10-15T14:28:48.188+0000",
+    "updatedOn" : "2018-10-15T14:28:48.188+0000",
+    "type" : "Integer",
+    "value" : "50",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a"
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:56:17] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:17 +0000] "GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1" 200 
+[2019-03-25 10:56:17] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzcsImV4cCI6MTU1NjEwMzM3N30.ZeBH_v59FTxvZtUyOS_XBg6LpltOxbt4vqyDmctXq6UkzjAwKyEjh7f0-cAVroclWp9-cV4bLsSdUCpBznWmvQ
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:17 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:28:48 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a",
+  "key" : "test-pack",
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:28:48.177+0000",
+  "updatedOn" : "2018-10-15T14:28:48.177+0000",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "type" : "consumer_rewards",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "0846ab9e0b5c8768ef65ae5499215b217c541665c30cb513b3a95ba73a2704b7",
+    "key" : "max_per_user",
+    "createdOn" : "2018-10-15T14:28:48.185+0000",
+    "updatedOn" : "2018-10-15T14:28:48.185+0000",
+    "type" : "Integer",
+    "value" : "1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "2b449b3eb93ea52cee652e12c0c14bfdf0f31aa3c7f9b0783346bac787bf2297",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:28:48.194+0000",
+    "updatedOn" : "2018-10-15T14:28:48.194+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "4bf55048c7d33175f7b9c2199b8ccd1bf92ac9c7059d4e94fc5ec98b1049ff94",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:28:48.190+0000",
+    "updatedOn" : "2018-10-15T14:28:48.190+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "5f8845192b1a9a1e540baaa459ae44098336422b408fe9caf8b82ffcb6050e21",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:28:48.192+0000",
+    "updatedOn" : "2018-10-15T14:28:48.192+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "8eb0dfa99fd8958167f2ed08f9619824e95cb55607adeef0d10863eac681d757",
+    "key" : "max",
+    "createdOn" : "2018-10-15T14:28:48.188+0000",
+    "updatedOn" : "2018-10-15T14:28:48.188+0000",
+    "type" : "Integer",
+    "value" : "50",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a"
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:56:17] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:17 +0000] "GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1" 200 
+[2019-03-25 10:56:17] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 10:56:18] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:18 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzgsImV4cCI6MTU1NjEwMzM3OH0.4JeOMN9SeUXlPmgpxoGnmLK_UlLI8HqrPgNrxOTHb5em3LijxX_3S7xifVzNCWefI-0T5DmsnVz2nEWeGOp-rQ
+Expires: Wed, 24 Apr 2019 10:56:18 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:56:18] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:18 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 10:56:18] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/QRNOTEXIST HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzgsImV4cCI6MTU1NjEwMzM3OH0.4JeOMN9SeUXlPmgpxoGnmLK_UlLI8HqrPgNrxOTHb5em3LijxX_3S7xifVzNCWefI-0T5DmsnVz2nEWeGOp-rQ
+
+
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:18 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 10:56:18] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:18 +0000] "GET /qrs/QRNOTEXIST HTTP/1.1" 404 0
+[2019-03-25 10:56:18] cr-log.ERROR - : Error in Request: 404
+[2019-03-25 10:56:18] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzgsImV4cCI6MTU1NjEwMzM3OH0.4JeOMN9SeUXlPmgpxoGnmLK_UlLI8HqrPgNrxOTHb5em3LijxX_3S7xifVzNCWefI-0T5DmsnVz2nEWeGOp-rQ
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:18 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:39:52 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa",
+  "key" : "2V4zopOY",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa",
+  "document" : {
+    "lob" : "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K73eF198MXu8b5BLH9+8efPc85588sm5r3/22WdXv9b/e7njfOaZZ+Ye/+GHH65+7ddff5372oEDB5Y9zlOnTpW99gAAgCYAfP31193zzz/f7dq1q7vrrrtmH42v/f7bb799xdfrG36fK1eurPiztmzZMve133777erX+k8eyz13+/btqx753rRp07LH2WMBgAkBED0Lr9W22EONAfR99L7vvNbj6gfwVoPN0o/x/X/9J43lPnUsfW4/YPdfzuFKxxndL28169MYAABWDcDDDz889/i77747GylfqTHeqJH/108A136UX/rcbdu2zT3ejzdklxUBAICFA6Avwy19/OLFi7PHv//++xAArh0D+Pzzz69+rf/3cs/tByqXPv7BBx8AAADDnPhW+/i1XJDi3zzyyCNzj3/88cezv8oHDx4MAaAfhFv6tccff3w2mt//1/97ued+9dVXc2MT/SeJ06dPdxcuXJj9991333UnTpzo9u7dOygAFZbaarXPIQAmAED/l/R6P+vIkSMhAFxvRH+18wDef//9VY0FAAAAALiJj8Iffvhh99hjj3UbN27sHnjgge6NN9644Wj+WhpdP77QT9jZuXPn1VmD/V/v1cwE7Mt/R48enc0e7CsWPQh9haAv/b322mtz5UEATBSAocos0f2qrBs4/vzzz7nn3nvvvZ3kXleZ40zVS4IASASgn/HWz8lf+tynnnpKCwYAAKYAwLWv3c+lP3v2rBYMgOkBsJYTHN3/i/r+f2+S6e9+e/rpp2flPclp6BE3gY11GTAANAJAAACABQcgc+JHxHFmdosqbwMHgAL9/lZ7660FraF+r8zfPfp1MpfRqnbOhzp+AAAAAAAAAAAAAICRAhBdWol4YytsWpk5ZlBtplurPfpabTgDAAAAAAAAAAAAALAAAAx14he1TBRddou+fz0ay1YzQyNeZ6jfFwAAAAAAAAAAAABgwcYAoscJovuLEa8z1AXeah/F6D33omeSVgMJAAAAAAAAAAAAAGBEYwBDlVwyG1bE60SX7KqNYURvulLhj0N0WRsAAAAAAAAAAAAAYAHGADL7wRVmFEb8jtHHmQlSNPwR56HaTFIAAAAAAAAAAAAAgIJjANH3/UeX+1r1WaPLd9EXfoVGkFm+i75hCAAAAAAAAAAAAABgImXAiHJK9LJSmasaR/dro0uymQ0xc0wr+ngAAAAAAAAAAAAAAAoCEH1TS0R5aqgGWu2mlujGHTEGUAGVzLUlJr8sOAAAAAAAAAAAAFhkACrcoJM5cy3iXEWMW7QqaY4RpMw/PgAAAAAAAAAAAAAACzYGkPmambMLI0qFrVDMvFc+s6Qcfc1XLxUCAAAAAAAAAAAAABQoA2Y23ExgMpe2Gqpvnbk+QXT/u2Lja/1zAQAAAAAAAAAAAACSf7nMzTqGQqvVbL7MMYzM1W2jl9fKhKra+gcAAAAAAAAAAAAAAMUBqFDaanUxVtjfbyhcW90gFdHnbjVeBQAAAAAAAAAAAAAwwTJgq5Vro0t2rfaLq7wdenQDqrxt+CT3BgQAAAAAAAAAAABT3B68Qr8tE6TM8mmrmY9DlVUzx2+iz0Pmis4AAAAAAAAAAAAAAMUBiGjoY9yGOnpl31als1YNLhrO6JmAAAAAAAAAAAAAAAATASBz5lqrfmpEo4+eQTlUA62wB2Bm+bRKnx4AAAAAAAAAAAAAoBgAEfe4RzTiVn3QzPPWap2GzIYSfYNXJmYAAAAAAAAAAAAAACMCoNp2za0u6sz96IYae4hGpcI+gRHf02pTFAAAAAAAAAAAAACA4gBE9O0qLCuVuWps5urFrcZLohtcq3ERAAAAAAAAAAAAAICJA1BhWawKM+wybzqJXh15qPGVVhuPVFttGgAAAAAAAAAAAABgRABUG2OI7n9Hv7HRM8ta7bOXWdarsE19lZIgAAAAAAAAAAAAAEBwA80sPWXeox/dr231s6LLXxHgZY4bZZ4HAAAAAAAAAAAAAICRAtDqdarNsIs4D8YA4pZbywRskvMAAAAAAAAAAAAAwBRXBGp1v37mTScRaI1l5lrm8Uc3psyxKwAAAAAAAAAAAAAAAISWwjL3eWu1p1zEsUWM5WRiH12yq7gMGAAAAAAAAAAAAADAxMYAKpTIMqGKLk+16t9HvKet/mgAAAAAAAAAAAAAAEwEgMy+Y2bpLLM/Gr1cVqtNTiqs1txqoxgAAAAAAAAAAAAAgAUDIHNWWoWbVzJ/l1aNe1HLhpl4TGZjEAAAAAAAAAAAADAVAESkbgAgAgARAYCIAEBEACAiABARAIgIAEQEACICABEBgIgAQEQAICIAEBEAiAgARAQAIgIAEQGAiABARAAgIgAQEQCICABEJC7/AzU15F+gKyeAAAAAAElFTkSuQmCC",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.994+0000",
+  "updatedOn" : "2018-10-15T14:39:52.359+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "redeem",
+  "content" : "OBJECTID:4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa\r\nIAT:1539613740946\r\nSIG:c22cdde09d6c241ba3728e8db0b8dc16dc2dae7a2ceee52ea2aa7be13123d080",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "63bbb33e0237695ff921688b03d94a21af57b9ef2940ef1c94dc5ff5cac983e8",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:01.075+0000",
+    "updatedOn" : "2018-10-15T14:29:01.075+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "be3ef0c81a5a8e6a0b40eafd1275204ed004a4288160e1e035a045bc6bf148c6",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:01.074+0000",
+    "updatedOn" : "2018-10-15T14:29:01.074+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e7b734aa25f00c5028513f65e00a1bbc5ad1dc6913d6fab30ef2c6580a313c76",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:01.076+0000",
+    "updatedOn" : "2018-10-15T14:29:01.076+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:56:18] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:18 +0000] "GET /qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa HTTP/1.1" 200 
+[2019-03-25 10:56:18] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzgsImV4cCI6MTU1NjEwMzM3OH0.4JeOMN9SeUXlPmgpxoGnmLK_UlLI8HqrPgNrxOTHb5em3LijxX_3S7xifVzNCWefI-0T5DmsnVz2nEWeGOp-rQ
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:18 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:29:00 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "key" : "D96VPoOw",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "document" : {
+    "lob" : "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",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.797+0000",
+  "updatedOn" : "2018-10-15T14:29:00.862+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "valid",
+  "content" : "OBJECTID:b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af\r\nIAT:1539613740756\r\nSIG:d68ee7857efa432b85b9798dd270b55e6b621314c6111091ab3a14f7a9511ed3",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "48690da5333e8ddb96ee6cb5d98e20caf905cefdb9d198d34a43f5dd16bdb1ed",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:00.860+0000",
+    "updatedOn" : "2018-10-15T14:29:00.860+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e06c0b5d9a9505021f56d2292ff2201844cfd4c57664ac987c5d203be540f12b",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:00.859+0000",
+    "updatedOn" : "2018-10-15T14:29:00.859+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "fe983f361b61f9b589cdb7fec87d84b4fbb3d44ffd58dc53d77e21a44bd74505",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:00.858+0000",
+    "updatedOn" : "2018-10-15T14:29:00.858+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:56:18] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:18 +0000] "GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1" 200 
+[2019-03-25 10:56:18] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTEzNzgsImV4cCI6MTU1NjEwMzM3OH0.4JeOMN9SeUXlPmgpxoGnmLK_UlLI8HqrPgNrxOTHb5em3LijxX_3S7xifVzNCWefI-0T5DmsnVz2nEWeGOp-rQ
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 10:56:18 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:29:00 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "key" : "D96VPoOw",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "document" : {
+    "lob" : "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",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.797+0000",
+  "updatedOn" : "2018-10-15T14:29:00.862+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "valid",
+  "content" : "OBJECTID:b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af\r\nIAT:1539613740756\r\nSIG:d68ee7857efa432b85b9798dd270b55e6b621314c6111091ab3a14f7a9511ed3",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "48690da5333e8ddb96ee6cb5d98e20caf905cefdb9d198d34a43f5dd16bdb1ed",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:00.860+0000",
+    "updatedOn" : "2018-10-15T14:29:00.860+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e06c0b5d9a9505021f56d2292ff2201844cfd4c57664ac987c5d203be540f12b",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:00.859+0000",
+    "updatedOn" : "2018-10-15T14:29:00.859+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "fe983f361b61f9b589cdb7fec87d84b4fbb3d44ffd58dc53d77e21a44bd74505",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:00.858+0000",
+    "updatedOn" : "2018-10-15T14:29:00.858+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 10:56:18] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:10:56:18 +0000] "GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1" 200 
+[2019-03-25 12:28:36] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 12:28:36] cr-log.NOTICE - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: incorrectsite.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+
+-----------------
+
+[2019-03-25 12:28:36] cr-log.NOTICE - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:36 +0000] "POST /auth HTTP/1.1" NULL NULL
+[2019-03-25 12:28:36] cr-log.ERROR - : cURL error 6: Could not resolve host: incorrectsite.com (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+[2019-03-25 12:28:36] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 12:28:36] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:36 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTYsImV4cCI6MTU1NjEwODkxNn0.4-7KFNEqG8uKPXy3c_RJW-MIh2MNiRPd2DRA0gCh7lvPbMVu-XWsK-6UUaZqgWs6tcmckZtpRuDf6I6I-W7Eqw
+Expires: Wed, 24 Apr 2019 12:28:36 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 12:28:36] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:36 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 12:28:36] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 12:28:36] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 78
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055----","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 403 Forbidden
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:36 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 12:28:36] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:36 +0000] "POST /auth HTTP/1.1" 403 0
+[2019-03-25 12:28:36] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+Expires: Wed, 24 Apr 2019 12:28:37 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 12:28:37] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+Expires: Wed, 24 Apr 2019 12:28:37 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/NOTEXIST HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+
+
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "GET /packs/NOTEXIST HTTP/1.1" 404 0
+[2019-03-25 12:28:37] cr-log.ERROR - : Error in Request: 404
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:28:48 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a",
+  "key" : "test-pack",
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:28:48.177+0000",
+  "updatedOn" : "2018-10-15T14:28:48.177+0000",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "type" : "consumer_rewards",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "0846ab9e0b5c8768ef65ae5499215b217c541665c30cb513b3a95ba73a2704b7",
+    "key" : "max_per_user",
+    "createdOn" : "2018-10-15T14:28:48.185+0000",
+    "updatedOn" : "2018-10-15T14:28:48.185+0000",
+    "type" : "Integer",
+    "value" : "1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "2b449b3eb93ea52cee652e12c0c14bfdf0f31aa3c7f9b0783346bac787bf2297",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:28:48.194+0000",
+    "updatedOn" : "2018-10-15T14:28:48.194+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "4bf55048c7d33175f7b9c2199b8ccd1bf92ac9c7059d4e94fc5ec98b1049ff94",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:28:48.190+0000",
+    "updatedOn" : "2018-10-15T14:28:48.190+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "5f8845192b1a9a1e540baaa459ae44098336422b408fe9caf8b82ffcb6050e21",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:28:48.192+0000",
+    "updatedOn" : "2018-10-15T14:28:48.192+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "8eb0dfa99fd8958167f2ed08f9619824e95cb55607adeef0d10863eac681d757",
+    "key" : "max",
+    "createdOn" : "2018-10-15T14:28:48.188+0000",
+    "updatedOn" : "2018-10-15T14:28:48.188+0000",
+    "type" : "Integer",
+    "value" : "50",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a"
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1" 200 
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:28:48 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a",
+  "key" : "test-pack",
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:28:48.177+0000",
+  "updatedOn" : "2018-10-15T14:28:48.177+0000",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "type" : "consumer_rewards",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "0846ab9e0b5c8768ef65ae5499215b217c541665c30cb513b3a95ba73a2704b7",
+    "key" : "max_per_user",
+    "createdOn" : "2018-10-15T14:28:48.185+0000",
+    "updatedOn" : "2018-10-15T14:28:48.185+0000",
+    "type" : "Integer",
+    "value" : "1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "2b449b3eb93ea52cee652e12c0c14bfdf0f31aa3c7f9b0783346bac787bf2297",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:28:48.194+0000",
+    "updatedOn" : "2018-10-15T14:28:48.194+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "4bf55048c7d33175f7b9c2199b8ccd1bf92ac9c7059d4e94fc5ec98b1049ff94",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:28:48.190+0000",
+    "updatedOn" : "2018-10-15T14:28:48.190+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "5f8845192b1a9a1e540baaa459ae44098336422b408fe9caf8b82ffcb6050e21",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:28:48.192+0000",
+    "updatedOn" : "2018-10-15T14:28:48.192+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "8eb0dfa99fd8958167f2ed08f9619824e95cb55607adeef0d10863eac681d757",
+    "key" : "max",
+    "createdOn" : "2018-10-15T14:28:48.188+0000",
+    "updatedOn" : "2018-10-15T14:28:48.188+0000",
+    "type" : "Integer",
+    "value" : "50",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a"
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "GET /packs/a6218477171a960db820198fc6ceaaa4257b67edee9f961bc885d3b9991d8f9a HTTP/1.1" 200 
+[2019-03-25 12:28:37] cr-log.DEBUG - : JWT empty or expired
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: POST /auth HTTP/1.1
+Content-Length: 74
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+
+{"username":"929363639337055","password":"Rsr2uCgSTiD00ty8wG3gHmOWc06I1E"}
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Length: 0
+Connection: keep-alive
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+Expires: Wed, 24 Apr 2019 12:28:37 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "POST /auth HTTP/1.1" 200 0
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/QRNOTEXIST HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+
+
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+
+
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "GET /qrs/QRNOTEXIST HTTP/1.1" 404 0
+[2019-03-25 12:28:37] cr-log.ERROR - : Error in Request: 404
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:39:52 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa",
+  "key" : "2V4zopOY",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa",
+  "document" : {
+    "lob" : "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K73eF198MXu8b5BLH9+8efPc85588sm5r3/22WdXv9b/e7njfOaZZ+Ye/+GHH65+7ddff5372oEDB5Y9zlOnTpW99gAAgCYAfP31193zzz/f7dq1q7vrrrtmH42v/f7bb799xdfrG36fK1eurPiztmzZMve133777erX+k8eyz13+/btqx753rRp07LH2WMBgAkBED0Lr9W22EONAfR99L7vvNbj6gfwVoPN0o/x/X/9J43lPnUsfW4/YPdfzuFKxxndL28169MYAABWDcDDDz889/i77747GylfqTHeqJH/108A136UX/rcbdu2zT3ejzdklxUBAICFA6Avwy19/OLFi7PHv//++xAArh0D+Pzzz69+rf/3cs/tByqXPv7BBx8AAADDnPhW+/i1XJDi3zzyyCNzj3/88cezv8oHDx4MAaAfhFv6tccff3w2mt//1/97ued+9dVXc2MT/SeJ06dPdxcuXJj9991333UnTpzo9u7dOygAFZbaarXPIQAmAED/l/R6P+vIkSMhAFxvRH+18wDef//9VY0FAAAAALiJj8Iffvhh99hjj3UbN27sHnjgge6NN9644Wj+WhpdP77QT9jZuXPn1VmD/V/v1cwE7Mt/R48enc0e7CsWPQh9haAv/b322mtz5UEATBSAocos0f2qrBs4/vzzz7nn3nvvvZ3kXleZ40zVS4IASASgn/HWz8lf+tynnnpKCwYAAKYAwLWv3c+lP3v2rBYMgOkBsJYTHN3/i/r+f2+S6e9+e/rpp2flPclp6BE3gY11GTAANAJAAACABQcgc+JHxHFmdosqbwMHgAL9/lZ7660FraF+r8zfPfp1MpfRqnbOhzp+AAAAAAAAAAAAAICRAhBdWol4YytsWpk5ZlBtplurPfpabTgDAAAAAAAAAAAAALAAAAx14he1TBRddou+fz0ay1YzQyNeZ6jfFwAAAAAAAAAAAABgwcYAoscJovuLEa8z1AXeah/F6D33omeSVgMJAAAAAAAAAAAAAGBEYwBDlVwyG1bE60SX7KqNYURvulLhj0N0WRsAAAAAAAAAAAAAYAHGADL7wRVmFEb8jtHHmQlSNPwR56HaTFIAAAAAAAAAAAAAgIJjANH3/UeX+1r1WaPLd9EXfoVGkFm+i75hCAAAAAAAAAAAAABgImXAiHJK9LJSmasaR/dro0uymQ0xc0wr+ngAAAAAAAAAAAAAAAoCEH1TS0R5aqgGWu2mlujGHTEGUAGVzLUlJr8sOAAAAAAAAAAAAFhkACrcoJM5cy3iXEWMW7QqaY4RpMw/PgAAAAAAAAAAAAAACzYGkPmambMLI0qFrVDMvFc+s6Qcfc1XLxUCAAAAAAAAAAAAABQoA2Y23ExgMpe2Gqpvnbk+QXT/u2Lja/1zAQAAAAAAAAAAAACSf7nMzTqGQqvVbL7MMYzM1W2jl9fKhKra+gcAAAAAAAAAAAAAAMUBqFDaanUxVtjfbyhcW90gFdHnbjVeBQAAAAAAAAAAAAAwwTJgq5Vro0t2rfaLq7wdenQDqrxt+CT3BgQAAAAAAAAAAABT3B68Qr8tE6TM8mmrmY9DlVUzx2+iz0Pmis4AAAAAAAAAAAAAAMUBiGjoY9yGOnpl31als1YNLhrO6JmAAAAAAAAAAAAAAAATASBz5lqrfmpEo4+eQTlUA62wB2Bm+bRKnx4AAAAAAAAAAAAAoBgAEfe4RzTiVn3QzPPWap2GzIYSfYNXJmYAAAAAAAAAAAAAACMCoNp2za0u6sz96IYae4hGpcI+gRHf02pTFAAAAAAAAAAAAACA4gBE9O0qLCuVuWps5urFrcZLohtcq3ERAAAAAAAAAAAAAICJA1BhWawKM+wybzqJXh15qPGVVhuPVFttGgAAAAAAAAAAAABgRABUG2OI7n9Hv7HRM8ta7bOXWdarsE19lZIgAAAAAAAAAAAAAEBwA80sPWXeox/dr231s6LLXxHgZY4bZZ4HAAAAAAAAAAAAAICRAtDqdarNsIs4D8YA4pZbywRskvMAAAAAAAAAAAAAwBRXBGp1v37mTScRaI1l5lrm8Uc3psyxKwAAAAAAAAAAAAAAAISWwjL3eWu1p1zEsUWM5WRiH12yq7gMGAAAAAAAAAAAAADAxMYAKpTIMqGKLk+16t9HvKet/mgAAAAAAAAAAAAAAEwEgMy+Y2bpLLM/Gr1cVqtNTiqs1txqoxgAAAAAAAAAAAAAgAUDIHNWWoWbVzJ/l1aNe1HLhpl4TGZjEAAAAAAAAAAAADAVAESkbgAgAgARAYCIAEBEACAiABARAIgIAEQEACICABEBgIgAQEQAICIAEBEAiAgARAQAIgIAEQGAiABARAAgIgAQEQCICABEJC7/AzU15F+gKyeAAAAAAElFTkSuQmCC",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.994+0000",
+  "updatedOn" : "2018-10-15T14:39:52.359+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "redeem",
+  "content" : "OBJECTID:4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa\r\nIAT:1539613740946\r\nSIG:c22cdde09d6c241ba3728e8db0b8dc16dc2dae7a2ceee52ea2aa7be13123d080",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "63bbb33e0237695ff921688b03d94a21af57b9ef2940ef1c94dc5ff5cac983e8",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:01.075+0000",
+    "updatedOn" : "2018-10-15T14:29:01.075+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "be3ef0c81a5a8e6a0b40eafd1275204ed004a4288160e1e035a045bc6bf148c6",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:01.074+0000",
+    "updatedOn" : "2018-10-15T14:29:01.074+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e7b734aa25f00c5028513f65e00a1bbc5ad1dc6913d6fab30ef2c6580a313c76",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:01.076+0000",
+    "updatedOn" : "2018-10-15T14:29:01.076+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "GET /qrs/4193cf76919c1583706811f8d929fd234cf24a2cb273302e85e7766e43688caa HTTP/1.1" 200 
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:29:00 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "key" : "D96VPoOw",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "document" : {
+    "lob" : "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",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.797+0000",
+  "updatedOn" : "2018-10-15T14:29:00.862+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "valid",
+  "content" : "OBJECTID:b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af\r\nIAT:1539613740756\r\nSIG:d68ee7857efa432b85b9798dd270b55e6b621314c6111091ab3a14f7a9511ed3",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "48690da5333e8ddb96ee6cb5d98e20caf905cefdb9d198d34a43f5dd16bdb1ed",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:00.860+0000",
+    "updatedOn" : "2018-10-15T14:29:00.860+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e06c0b5d9a9505021f56d2292ff2201844cfd4c57664ac987c5d203be540f12b",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:00.859+0000",
+    "updatedOn" : "2018-10-15T14:29:00.859+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "fe983f361b61f9b589cdb7fec87d84b4fbb3d44ffd58dc53d77e21a44bd74505",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:00.858+0000",
+    "updatedOn" : "2018-10-15T14:29:00.858+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1" 200 
+[2019-03-25 12:28:37] cr-log.DEBUG - : 
+-----------------
+REQUEST: GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1
+User-Agent: GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1
+Host: api-consumerrewards-test.pernod-ricard-espana.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MjkzNjM2MzkzMzcwNTUiLCJpYXQiOjE1NTM1MTY5MTcsImV4cCI6MTU1NjEwODkxN30.Pb9lpikL0E4YxeDwwiIME3-ksuwGsIN8ytU4vonFillplQZttTZ37zauCgbRAWv87HqKph6sf6T3y0hoKOPoqA
+
+
+
+RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Mon, 25 Mar 2019 12:28:37 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Mon, 15 Oct 2018 14:29:00 GMT
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+vary: accept-encoding
+
+{
+  "objectId" : "b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "key" : "D96VPoOw",
+  "url" : "https://consumerrewards-test.pernod-ricard-espana.com/q/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af",
+  "document" : {
+    "lob" : "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",
+    "mimeType" : "image/png"
+  },
+  "publishedOn" : "2018-10-15T14:28:48.085+0000",
+  "createdOn" : "2018-10-15T14:29:00.797+0000",
+  "updatedOn" : "2018-10-15T14:29:00.862+0000",
+  "type" : "consumer_rewards",
+  "body" : "aqui tienes tu chupito",
+  "label" : "jander",
+  "status" : "valid",
+  "content" : "OBJECTID:b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af\r\nIAT:1539613740756\r\nSIG:d68ee7857efa432b85b9798dd270b55e6b621314c6111091ab3a14f7a9511ed3",
+  "i18ns" : [ ],
+  "configurations" : [ {
+    "objectId" : "48690da5333e8ddb96ee6cb5d98e20caf905cefdb9d198d34a43f5dd16bdb1ed",
+    "key" : "foreground_color",
+    "createdOn" : "2018-10-15T14:29:00.860+0000",
+    "updatedOn" : "2018-10-15T14:29:00.860+0000",
+    "type" : "Integer",
+    "value" : "-16777216",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "e06c0b5d9a9505021f56d2292ff2201844cfd4c57664ac987c5d203be540f12b",
+    "key" : "background_color",
+    "createdOn" : "2018-10-15T14:29:00.859+0000",
+    "updatedOn" : "2018-10-15T14:29:00.859+0000",
+    "type" : "Integer",
+    "value" : "-1",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  }, {
+    "objectId" : "fe983f361b61f9b589cdb7fec87d84b4fbb3d44ffd58dc53d77e21a44bd74505",
+    "key" : "force_logged",
+    "createdOn" : "2018-10-15T14:29:00.858+0000",
+    "updatedOn" : "2018-10-15T14:29:00.858+0000",
+    "type" : "Boolean",
+    "value" : "false",
+    "_links" : {
+      "item" : {
+        "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+        "templated" : true
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af"
+    },
+    "qr" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af{?projection}",
+      "templated" : true
+    },
+    "pack" : {
+      "href" : "http://api-consumerrewards-test.pernod-ricard-espana.com/qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af/pack{?projection}",
+      "templated" : true
+    }
+  }
+}
+-----------------
+
+[2019-03-25 12:28:37] cr-log.INFO - : mkt-idominguez GuzzleHttp/6.3.3 curl/7.47.0 PHP/7.3.3-1+ubuntu16.04.1+deb.sury.org+1 - [25/Mar/2019:12:28:37 +0000] "GET /qrs/b07943e368333a1490473c41ff55ff50faaa52a628e843c33abad108e50721af HTTP/1.1" 200 
