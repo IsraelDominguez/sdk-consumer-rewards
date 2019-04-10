@@ -37,4 +37,5 @@ And add you "require" the dependency
  "israeldominguez/sdk-consumer-rewards": "dev-master"
 ``` 
 
-You can download the package on GitHub and use in your project
+You can [download](https://github.com/IsraelDominguez/sdk-consumer-rewards/archive/master.zip) the package on GitHub and use in your project
+
