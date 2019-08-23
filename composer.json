@@ -28,5 +28,12 @@
         "psr-4": {
             "ConsumerRewards\\SDK\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConsumerRewards\\SDK\\Providers\\ConsumerRewardsServiceProvider"
+            ]
+        }
     }
 }
