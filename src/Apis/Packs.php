@@ -8,7 +8,7 @@ use ConsumerRewards\SDK\Transfer\Pack;
 
 class Packs extends ApiGeneric
 {
-    const ENDPOINT = '/packs/';
+    const ENDPOINT = '/packs';
 
     /**
      * Packs Api.
@@ -28,13 +28,10 @@ class Packs extends ApiGeneric
     public function findById(string $objectId) : Pack
     {
         try {
-            $request = $this->http->getAuthenticatedRequest(
-                NetTools::HTTP_GET,
-                $this->http->buildApiUrl(Packs::ENDPOINT . $objectId),
-                Container::get('JWT')->getBearer()
+            return $this->http->getSerializedResponse(
+                $this->getAuthenticatedRequest(NetTools::HTTP_GET, $this->http->buildApiUrl(sprintf('%s/%s', Packs::ENDPOINT, $objectId))),
+                Pack::class
             );
-
-            return $this->http->getSerializedResponse($request, Pack::class);
         } catch (ConsumerRewardsException $e) {
             $this->logger->error($e->getMessage());
             throw new InvalidPackException($e->getMessage());

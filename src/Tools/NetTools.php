@@ -112,13 +112,12 @@ class NetTools
      *
      * @param  string $method
      * @param  string $url
-     * @param  JWT|string $bearer
      * @param  array $options Any of "headers", "body", and "protocolVersion".
      * @return RequestInterface
      */
-    public function getAuthenticatedRequest(string $method, string $url, $bearer, array $options = [])
+    public function getAuthenticatedRequest(string $method, string $url, array $options = [])
     {
-        return $this->createRequest($method, $url, $bearer, $options);
+        return $this->createRequest($method, $url, Container::get('JWT')->getBearer(), $options);
     }
 
     /**

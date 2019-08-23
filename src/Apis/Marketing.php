@@ -15,7 +15,7 @@ use JMS\Serializer\SerializerBuilder;
 
 class Marketing extends ApiGeneric
 {
-    const ENDPOINT = '/marketing/';
+    const ENDPOINT = '/marketing';
 
     /**
      * Marketing constructor.
@@ -52,7 +52,6 @@ class Marketing extends ApiGeneric
             $request = $this->http->getAuthenticatedRequest(
                 NetTools::HTTP_POST,
                 $this->http->buildApiUrl(Marketing::ENDPOINT . 'packs', ['generateMax' => ($generate_max) ? 'true' : 'false']),
-                Container::get('JWT')->getBearer(),
                 $options
             );
 
@@ -79,7 +78,6 @@ class Marketing extends ApiGeneric
             $request = $this->http->getAuthenticatedRequest(
                 NetTools::HTTP_POST,
                 $this->http->buildApiUrl(Marketing::ENDPOINT . 'packs/' . $pack),
-                Container::get('JWT')->getBearer(),
                 $options
             );
 
@@ -93,25 +91,20 @@ class Marketing extends ApiGeneric
     }
 
     /**
-     * Check status of qr by id for a specified user (dba8611d6e3ba4ca3247ab8efd3554943d39e4fab02fd10f25844164a0da47e2)
+     * Check status of qr by id (dba8611d6e3ba4ca3247ab8efd3554943d39e4fab02fd10f25844164a0da47e2)
      *
      * @param string $objectId
-     * @param User|null $user
      * @return string
      * @throws InvalidQrException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function checkById(string $objectId, User $user = null) : string
+    public function checkById(string $objectId) : string
     {
         try {
-
-            $request = $this->http->getAuthenticatedRequest(
+            $response = $this->http->getResponse($this->getAuthenticatedRequest(
                 NetTools::HTTP_HEAD,
-                $this->http->buildApiUrl(Marketing::ENDPOINT . 'qrs/' . $objectId, (!empty($user)) ? $user->toArray() : []),
-                Container::get('JWT')->getBearer()
-            );
-
-            $response = $this->http->getResponse($request, ['http_errors' => false]);
+                $this->http->buildApiUrl(sprintf("%s/qrs/%s", Marketing::ENDPOINT, $objectId))
+            ), ['http_errors' => false]);
 
             $this->logger->info(sprintf("Check Qr '%s' status: '%s'", $objectId, $response->getStatusCode()));
 
