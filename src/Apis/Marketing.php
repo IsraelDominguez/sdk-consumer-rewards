@@ -135,4 +135,48 @@ class Marketing extends ApiGeneric
         }
     }
 
+    /**
+     * @param string $objectId
+     * @param User|null $user
+     * @return string|Qr
+     * @throws InvalidQrException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function redeem(string $objectId, User $user = null) {
+        try {
+            $options = ['http_errors' => false];
+
+            $options['body'] = \GuzzleHttp\json_encode((Object)[]);
+            if ($user)
+                $options['body'] = \GuzzleHttp\json_encode($user);
+
+            $response = $this->http->getResponse($this->getAuthenticatedRequest(
+                NetTools::HTTP_POST,
+                $this->http->buildApiUrl(sprintf("%s/qrs/%s", Marketing::ENDPOINT, $objectId))
+            ), $options);
+
+            switch ($response->getStatusCode()) {
+                case HttpStatus::HTTP_OK:
+                    $serializer = SerializerBuilder::create()->build();
+
+                    $json = $serializer->serialize(json_decode($response->getBody()), 'json');
+                    $object  = $serializer->deserialize($json, Qr::class, 'json');
+                    return $object;
+
+                    break;
+                case HttpStatus::HTTP_GONE:
+                    return Qr::STATUS_REDEEM;
+                    break;
+
+                case HttpStatus::HTTP_NOT_FOUND:
+                default:
+                    throw new InvalidQrException();
+            }
+
+        } catch (ClientException | ConsumerRewardsException $e) {
+            throw new InvalidQrException();
+            $this->logger->error($e->getMessage() . sprintf("Reedem Qr '%s' and User '%s'", $objectId, $user ? $user->getIdentifier() : ''));
+        }
+    }
+
 }

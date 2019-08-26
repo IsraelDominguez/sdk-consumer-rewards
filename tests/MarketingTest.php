@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 final class MarketingTest extends TestCase
 {
 
-   /**
+    /**
      * @var \ConsumerRewards\SDK\ConsumerRewards
      */
     protected static $sdk = null;
@@ -53,7 +53,23 @@ final class MarketingTest extends TestCase
     /**
      * @expectedException \ConsumerRewards\SDK\Exception\InvalidQrException
      */
-    public function testQrInvalid() {
+    public function testQrIsInvalid() {
         self::$sdk->getMarketing()->checkById('Not Exist');
     }
+
+    /**
+     * @expectedException \ConsumerRewards\SDK\Exception\InvalidQrException
+     */
+    public function testReedemQrInvalid() {
+        self::$sdk->getMarketing()->redeem('Not Exist');
+    }
+
+    public function testReedemValidQr() {
+        $objectID = '5f40d3e876ba31434a6e72ba046b7d5f99ec061ceb6dfac24b153099aed0c343';
+        $qr = self::$sdk->getMarketing()->redeem($objectID);
+        $this->assertInstanceOf(Qr::class, $qr);
+        $this->assertEquals($objectID, $qr->getObjectId());
+        $this->assertEquals(Qr::STATUS_REDEEM, $qr->getStatus());
+    }
+
 }
