@@ -113,7 +113,7 @@ class Qr extends Item
     /**
      * @return string
      */
-    public function getBody(): string
+    public function getBody()
     {
         return $this->body;
     }

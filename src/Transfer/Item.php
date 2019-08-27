@@ -146,7 +146,7 @@ class Item
     /**
      * @return string
      */
-    public function getCaption(): string
+    public function getCaption()
     {
         return $this->caption;
     }

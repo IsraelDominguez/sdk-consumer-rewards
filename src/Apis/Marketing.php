@@ -96,6 +96,7 @@ class Marketing extends ApiGeneric
      * @param string $objectId
      * @return string
      * @throws InvalidQrException
+     * @throws MaxReachedException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function checkById(string $objectId) : string
@@ -132,10 +133,13 @@ class Marketing extends ApiGeneric
         } catch (ClientException $e) {
         } catch (MaxReachedException $e) {
             $this->logger->error($e->getMessage() . sprintf("Check Qr by Id '%s' and User '%s'", $objectId, $user->getIdentifier()));
+            throw $e;
         }
     }
 
     /**
+     * Reedem a QR
+     *
      * @param string $objectId
      * @param User|null $user
      * @return string|Qr
@@ -165,18 +169,20 @@ class Marketing extends ApiGeneric
 
                     break;
                 case HttpStatus::HTTP_GONE:
-                    return Qr::STATUS_REDEEM;
+                    throw new InvalidQrException('QR is Reedem');
                     break;
 
                 case HttpStatus::HTTP_NOT_FOUND:
+                    throw new InvalidQrException('QR not Found');
+                    break;
+
                 default:
-                    throw new InvalidQrException();
+                    throw new InvalidQrException('Error: ' .$response->getStatusCode());
             }
 
         } catch (ClientException | ConsumerRewardsException $e) {
-            throw new InvalidQrException();
             $this->logger->error($e->getMessage() . sprintf("Reedem Qr '%s' and User '%s'", $objectId, $user ? $user->getIdentifier() : ''));
+            throw new InvalidQrException($e->getMessage());
         }
     }
-
 }
