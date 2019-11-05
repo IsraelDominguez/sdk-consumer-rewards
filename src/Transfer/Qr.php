@@ -77,7 +77,7 @@ class Qr extends Item
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -95,7 +95,7 @@ class Qr extends Item
     /**
      * @return Pack
      */
-    public function getPack(): Pack
+    public function getPack(): ?Pack
     {
         return $this->pack;
     }
@@ -131,7 +131,7 @@ class Qr extends Item
     /**
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
@@ -149,7 +149,7 @@ class Qr extends Item
     /**
      * @return User
      */
-    public function getUser(): User
+    public function getUser(): ?User
     {
         return $this->user;
     }
@@ -167,7 +167,7 @@ class Qr extends Item
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -185,7 +185,7 @@ class Qr extends Item
     /**
      * @return string
      */
-    public function getContent(): string
+    public function getContent(): ?string
     {
         return $this->content;
     }
