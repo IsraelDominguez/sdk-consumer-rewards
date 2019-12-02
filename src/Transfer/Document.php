@@ -1,7 +1,7 @@
 <?php namespace ConsumerRewards\SDK\Transfer;
 
 use JMS\Serializer\Annotation\Type;
-
+use JMS\Serializer\Annotation\SerializedName;
 /**
  * Class Document
  *
@@ -16,6 +16,7 @@ class Document
     /**
      * @var $mimeType
      * @Type("string")
+     * @SerializedName("mimeType")
      */
     protected $mimeType;
 

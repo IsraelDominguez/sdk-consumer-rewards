@@ -67,8 +67,8 @@ class User implements \JsonSerializable
     public function toArray()
     {
         return [
-            'user.identifier' => $this->identifier,
-            'user.provider' => $this->provider
+            'identifier' => $this->identifier,
+            'provider' => $this->provider
 
         ];
     }

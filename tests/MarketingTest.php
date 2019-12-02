@@ -34,4 +34,10 @@ final class MarketingTest extends InitTest
         $this->assertEquals(Qr::STATUS_REDEEM, $qr->getStatus());
     }
 
+    public function testGenerateQrForPack() {
+        $qr = $this->sdk->getMarketing()->generateQr($this->pack, new \ConsumerRewards\SDK\Transfer\User('b898132708bef3cd00233030cbc57107e008a374'));
+        $this->assertInstanceOf(Qr::class, $qr);
+        $this->assertNotNull($qr->getObjectId());
+    }
+
 }

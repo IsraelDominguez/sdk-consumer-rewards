@@ -1,12 +1,15 @@
 <?php namespace ConsumerRewards\SDK\Transfer;
 
+use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\SerializedName;
 
 class Item
 {
     /**
      * @var string $objectId
      * @Type("string")
+     * @SerializedName("objectId")
      */
     protected $objectId = '';
 
@@ -19,6 +22,7 @@ class Item
     /**
      * @var string $displayName
      * @Type("string")
+     * @SerializedName("displayName")
      */
     protected $displayName = '';
 
@@ -43,18 +47,21 @@ class Item
     /**
      * @var string $createdOn
      * @Type("string")
+     * @SerializedName("createdOn")
      */
     protected $createdOn;
 
     /**
      * @var string $publishedOn
      * @Type("string")
+     * @SerializedName("publishedOn")
      */
     protected $publishedOn;
 
     /**
      * @var string $expiresOn
      * @Type("string")
+     * @SerializedName("expiresOn")
      */
     protected $expiresOn;
 
