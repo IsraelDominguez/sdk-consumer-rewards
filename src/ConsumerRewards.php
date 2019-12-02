@@ -37,6 +37,8 @@ class ConsumerRewards
     public function __construct(array $config = [], array $options = [])
     {
         try {
+            AnnotationRegistry::registerLoader('class_exists');
+
             $reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
             AnnotationRegistry::registerAutoloadNamespace(
                 'JMS\Serializer\Annotation',

@@ -34,7 +34,7 @@ class Marketing extends ApiGeneric
     public function generateQrAndRedirect($pack, User $user) {
         $this->logger->info(sprintf("Generate Qr for Pack '%s' and User '%s'", $pack, $user->getIdentifier()));
 
-        header('Location: ' . $this->http->buildWebUrl(Marketing::ENDPOINT . $pack, $user->toArray()));
+        header('Location: ' . $this->http->buildWebUrl(sprintf("%s/%s", Marketing::ENDPOINT ,$pack), $user->toArray()));
         exit;
     }
 
@@ -51,7 +51,7 @@ class Marketing extends ApiGeneric
 
             $request = $this->http->getAuthenticatedRequest(
                 NetTools::HTTP_POST,
-                $this->http->buildApiUrl(Marketing::ENDPOINT . 'packs', ['generateMax' => ($generate_max) ? 'true' : 'false']),
+                $this->http->buildApiUrl(sprintf("%s/packs", Marketing::ENDPOINT), ['generateMax' => ($generate_max) ? 'true' : 'false']),
                 $options
             );
 
@@ -77,7 +77,7 @@ class Marketing extends ApiGeneric
 
             $request = $this->http->getAuthenticatedRequest(
                 NetTools::HTTP_POST,
-                $this->http->buildApiUrl(Marketing::ENDPOINT . 'packs/' . $pack),
+                $this->http->buildApiUrl(sprintf("%s/packs/%s", Marketing::ENDPOINT, $pack)),
                 $options
             );
 

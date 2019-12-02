@@ -5,34 +5,34 @@ use JMS\Serializer\Annotation\Type;
 class Item
 {
     /**
-     * @var string
+     * @var string $objectId
      * @Type("string")
      */
-    protected $objectId;
+    protected $objectId = '';
 
     /**
-     * @var string
+     * @var string $key
      * @Type("string")
      */
-    protected $key;
+    protected $key = '';
 
     /**
-     * @var string
+     * @var string $displayName
      * @Type("string")
      */
-    protected $displayName;
+    protected $displayName = '';
 
     /**
-     * @var string
+     * @var string $caption
      * @Type("string")
      */
-    protected $caption;
+    protected $caption = '';
 
     /**
-     * @var string
+     * @var string $url
      * @Type("string")
      */
-    protected $url;
+    protected $url = '';
 
     /**
      * @var Document $document
@@ -41,19 +41,19 @@ class Item
     protected $document;
 
     /**
-     * @var string
+     * @var string $createdOn
      * @Type("string")
      */
     protected $createdOn;
 
     /**
-     * @var string
+     * @var string $publishedOn
      * @Type("string")
      */
     protected $publishedOn;
 
     /**
-     * @var string
+     * @var string $expiresOn
      * @Type("string")
      */
     protected $expiresOn;

@@ -1,20 +1,52 @@
-<?php namespace Genetsis\Druid\Rest;
+<?php namespace ConsumerRewards\SDK;
+
+use Cache\Adapter\Void\VoidCachePool;
 
 final class ConfigTest extends InitTest
 {
-    public function testDruidRestLoggerConfig()
+    /**
+     * @expectedException \ConsumerRewards\SDK\Exception\ConsumerRewardsException
+     */
+    public function testFailConsumerRewardsConnection()
     {
-        $this->assertInstanceOf(\Psr\Log\LoggerInterface::class, $this->api->getConfig()->getLogger());
+        $sdk = new \ConsumerRewards\SDK\ConsumerRewards([
+            'username' => $this->username,
+            'password' => $this->password,
+            'api' => 'http://incorrectsite.com',
+            'web' => $this->web,
+        ],[
+            'cache' => new VoidCachePool()
+        ]);
     }
 
-    public function testDruidRestCacheConfig()
+    public function testConsumerRewardsInstanceOk()
     {
-        $this->assertInstanceOf(\Cache\Adapter\Common\AbstractCachePool::class, $this->api->getConfig()->getCache());
+        $sdk = new \ConsumerRewards\SDK\ConsumerRewards([
+            'username' => $this->username,
+            'password' => $this->password,
+            'api' => $this->api,
+            'web' => $this->web,
+        ],[
+            'cache' => new VoidCachePool()
+        ]);
+
+        $this->assertInstanceOf(\ConsumerRewards\SDK\ConsumerRewards::class, $sdk);
+
     }
 
-    public function testDruidRestHttpConfig()
+    /**
+     * @expectedException \ConsumerRewards\SDK\Exception\ConsumerRewardsSdkAuthException
+     */
+    public function testConsumerRewardsInstanceAuthFail()
     {
-        $this->assertInstanceOf(\GuzzleHttp\Client::class, $this->api->getConfig()->getHttp());
+        $sdk = new \ConsumerRewards\SDK\ConsumerRewards([
+            'username' => $this->username . '----',
+            'password' => $this->password,
+            'api' => $this->api,
+            'web' => $this->web,
+        ],[
+            'cache' => new VoidCachePool()
+        ]);
     }
 
 }
